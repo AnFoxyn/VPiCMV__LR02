@@ -1,17 +1,140 @@
 <Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:StudentControl.ViewModels"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		
+        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="600"
+		xmlns:vm="using:StudentControl.ViewModels"
         x:Class="StudentControl.Views.MainWindow"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="StudentControl">
+        Icon="/Assets/SibSUTIS.ico"
+        Title="StudentControl"
+		Classes="Dark">
+	<Window.Styles>
+		<StyleInclude Source="/Assets/Styles.axaml"></StyleInclude>
+	</Window.Styles>
+	<Grid ColumnDefinitions="100*"
+		  RowDefinitions="40, *, 40, 80, 60, 60">
+		<Grid Classes="Heading" Grid.Row="0"
+			  ColumnDefinitions="3*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 2*"
+			  RowDefinitions="100*">
+			<Border Classes="TextBlockBorder" Grid.Column="0">
+				<TextBlock>ФИО</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="1">
+				<TextBlock>ЭЭС</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="2">
+				<TextBlock>СЭВМиТ</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="3">
+				<TextBlock>АЭВМ</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="4">
+				<TextBlock>ТВиМС</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="5">
+				<TextBlock>СГМА</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="6">
+				<TextBlock>ВМ</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="7">
+				<TextBlock>ВМиЧМВ</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="8">
+				<TextBlock>Средний Балл</TextBlock>
+			</Border>
+		</Grid>
+		<ListBox Name="ListOfStudents" Grid.Row="1">
 
-    <Design.DataContext>
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+		</ListBox>
+		<Grid Classes="AllAvgRes" Grid.Row="2"
+			  ColumnDefinitions="3*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 2*"
+			  RowDefinitions="100*">
+			<Border Classes="TextBlockBorder" Grid.Column="0"></Border>
+			<Border Classes="TextBlockBorder" Grid.Column="1">
+				<TextBlock>NaN</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="2">
+				<TextBlock>NaN</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="3">
+				<TextBlock>NaN</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="4">
+				<TextBlock>NaN</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="5">
+				<TextBlock>NaN</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="6">
+				<TextBlock>NaN</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="7">
+				<TextBlock>NaN</TextBlock>
+			</Border>
+			<Border Classes="TextBlockBorder" Grid.Column="8">
+				<TextBlock>NaN</TextBlock>
+			</Border>
+		</Grid>
+		<Grid Classes="NewStudentBlock" Grid.Row="3"
+			  ColumnDefinitions="3*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 2*"
+			  RowDefinitions="100*">
+			<TextBox Name="NewStudentInput" Grid.Column="0"></TextBox>
+			<ComboBox SelectedIndex="0" Grid.Column="1">
+				<ComboBoxItem>0</ComboBoxItem>
+				<ComboBoxItem>1</ComboBoxItem>
+				<ComboBoxItem>2</ComboBoxItem>
+			</ComboBox>
+			<ComboBox SelectedIndex="0" Grid.Column="2">
+				<ComboBoxItem>0</ComboBoxItem>
+				<ComboBoxItem>1</ComboBoxItem>
+				<ComboBoxItem>2</ComboBoxItem>
+			</ComboBox>
+			<ComboBox SelectedIndex="0" Grid.Column="3">
+				<ComboBoxItem>0</ComboBoxItem>
+				<ComboBoxItem>1</ComboBoxItem>
+				<ComboBoxItem>2</ComboBoxItem>
+			</ComboBox>
+			<ComboBox SelectedIndex="0" Grid.Column="4">
+				<ComboBoxItem>0</ComboBoxItem>
+				<ComboBoxItem>1</ComboBoxItem>
+				<ComboBoxItem>2</ComboBoxItem>
+			</ComboBox>
+			<ComboBox SelectedIndex="0" Grid.Column="5">
+				<ComboBoxItem>0</ComboBoxItem>
+				<ComboBoxItem>1</ComboBoxItem>
+				<ComboBoxItem>2</ComboBoxItem>
+			</ComboBox>
+			<ComboBox SelectedIndex="0" Grid.Column="6">
+				<ComboBoxItem>0</ComboBoxItem>
+				<ComboBoxItem>1</ComboBoxItem>
+				<ComboBoxItem>2</ComboBoxItem>
+			</ComboBox>
+			<ComboBox SelectedIndex="0" Grid.Column="7">
+				<ComboBoxItem>0</ComboBoxItem>
+				<ComboBoxItem>1</ComboBoxItem>
+				<ComboBoxItem>2</ComboBoxItem>
+			</ComboBox>
+			<Border Classes="TextBlockBorder" Grid.Column="8">
+				<TextBlock >NaN</TextBlock>
+			</Border>
+		</Grid>
+		<Grid Grid.Row="4"
+			  ColumnDefinitions="50*, 50*"
+			  RowDefinitions="100*">
+			<Button Name="AddStudent"
+					Grid.Row="4" Grid.Column="0">Добавить</Button>
+			<Button Name="DeleteStudent"
+					Grid.Row="4" Grid.Column="1">Удалить</Button>
+		</Grid>
+		<Grid Grid.Row="5"
+			  ColumnDefinitions="50*, 50*"
+			  RowDefinitions="100*">
+			<Button Name="SaveToFile"
+					Grid.Row="5" Grid.Column="0">Сохранить</Button>
+			<Button Name="UploadFromFile"
+					Grid.Row="5" Grid.Column="1">Загрузить</Button>
+		</Grid>
+	</Grid>
 </Window>

@@ -1,0 +1,382 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+		<Window Width="900" Height="600" Classes="Light">
+			<Grid ColumnDefinitions="100*"
+			      RowDefinitions="40, *, 40, 80, 60, 60">
+				<Grid Classes="Heading" Grid.Row="0"
+					  ColumnDefinitions="3*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 2*"
+					  RowDefinitions="100*">
+					<Border Classes="TextBlockBorder" Grid.Column="0">
+						<TextBlock>ФИО</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="1">
+						<TextBlock>ЭЭС</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="2">
+						<TextBlock>СЭВМиТ</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="3">
+						<TextBlock>АЭВМ</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="4">
+						<TextBlock>ТВиМС</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="5">
+						<TextBlock>СГМА</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="6">
+						<TextBlock>ВМ</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="7">
+						<TextBlock>ВМиЧМВ</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="8">
+						<TextBlock>Средний Балл</TextBlock>
+					</Border>
+				</Grid>
+				<ListBox Name="ListOfStudents" Grid.Row="1">
+
+				</ListBox>
+				<Grid Classes="AllAvgRes" Grid.Row="2"
+					  ColumnDefinitions="3*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 2*"
+					  RowDefinitions="100*">
+					<Border Classes="TextBlockBorder" Grid.Column="0"></Border>
+					<Border Classes="TextBlockBorder" Grid.Column="1">
+						<TextBlock>NaN</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="2">
+						<TextBlock>NaN</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="3">
+						<TextBlock>NaN</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="4">
+						<TextBlock>NaN</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="5">
+						<TextBlock>NaN</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="6">
+						<TextBlock>NaN</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="7">
+						<TextBlock>NaN</TextBlock>
+					</Border>
+					<Border Classes="TextBlockBorder" Grid.Column="8">
+						<TextBlock>NaN</TextBlock>
+					</Border>
+				</Grid>
+				<Grid Classes="NewStudentBlock" Grid.Row="3"
+					  ColumnDefinitions="3*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 2*"
+					  RowDefinitions="100*">
+					<TextBox Name="NewStudentInput" Grid.Column="0"></TextBox>
+					<ComboBox SelectedIndex="0" Grid.Column="1">
+						<ComboBoxItem>0</ComboBoxItem>
+						<ComboBoxItem>1</ComboBoxItem>
+						<ComboBoxItem>2</ComboBoxItem>
+					</ComboBox>
+					<ComboBox SelectedIndex="0" Grid.Column="2">
+						<ComboBoxItem>0</ComboBoxItem>
+						<ComboBoxItem>1</ComboBoxItem>
+						<ComboBoxItem>2</ComboBoxItem>
+					</ComboBox>
+					<ComboBox SelectedIndex="0" Grid.Column="3">
+						<ComboBoxItem>0</ComboBoxItem>
+						<ComboBoxItem>1</ComboBoxItem>
+						<ComboBoxItem>2</ComboBoxItem>
+					</ComboBox>
+					<ComboBox SelectedIndex="0" Grid.Column="4">
+						<ComboBoxItem>0</ComboBoxItem>
+						<ComboBoxItem>1</ComboBoxItem>
+						<ComboBoxItem>2</ComboBoxItem>
+					</ComboBox>
+					<ComboBox SelectedIndex="0" Grid.Column="5">
+						<ComboBoxItem>0</ComboBoxItem>
+						<ComboBoxItem>1</ComboBoxItem>
+						<ComboBoxItem>2</ComboBoxItem>
+					</ComboBox>
+					<ComboBox SelectedIndex="0" Grid.Column="6">
+						<ComboBoxItem>0</ComboBoxItem>
+						<ComboBoxItem>1</ComboBoxItem>
+						<ComboBoxItem>2</ComboBoxItem>
+					</ComboBox>
+					<ComboBox SelectedIndex="0" Grid.Column="7">
+						<ComboBoxItem>0</ComboBoxItem>
+						<ComboBoxItem>1</ComboBoxItem>
+						<ComboBoxItem>2</ComboBoxItem>
+					</ComboBox>
+					<Border Classes="TextBlockBorder" Grid.Column="8">
+						<TextBlock >NaN</TextBlock>
+					</Border>
+				</Grid>
+				<Grid Grid.Row="4"
+					  ColumnDefinitions="50*, 50*"
+					  RowDefinitions="100*">
+					<Button Name="AddStudent"
+							Grid.Row="4" Grid.Column="0">Добавить</Button>
+					<Button Name="DeleteStudent"
+							Grid.Row="4" Grid.Column="1">Удалить</Button>
+				</Grid>
+				<Grid Grid.Row="5"
+					  ColumnDefinitions="50*, 50*"
+					  RowDefinitions="100*">
+					<Button Name="SaveToFile"
+							Grid.Row="5" Grid.Column="0">Сохранить</Button>
+					<Button Name="UploadFromFile"
+							Grid.Row="5" Grid.Column="1">Загрузить</Button>
+				</Grid>
+			</Grid>
+		</Window>
+	</Design.PreviewWith>
+
+	<!-- ~~~WINDOW'S STYLES~~~ -->
+	<Style Selector="Window">
+		<Setter Property="FontFamily" Value="Inter"></Setter>
+		<Setter	Property="FontStyle" Value="Normal"></Setter>
+		<Setter Property="FontWeight" Value="Regular"></Setter>
+		
+		<Setter Property="Width" Value="900"></Setter>
+		<Setter Property="Height" Value="600"></Setter>
+		<Setter Property="MinWidth" Value="900"></Setter>
+		<Setter Property="MinHeight" Value="600"></Setter>
+	</Style>
+	<Style Selector="Window.Dark">
+		<Setter Property="Background" Value="#14181A"></Setter>
+		<Setter Property="Foreground" Value="#DFE4E7"></Setter>
+	</Style>
+	<Style Selector="Window.Light">
+		<Setter Property="Background" Value="#DFE4E7"></Setter>
+		<Setter Property="Foreground" Value="#14181A"></Setter>
+	</Style>
+
+	
+	
+	<!-- Heading Styles -->
+	<Style Selector="Grid.Heading">
+		<Setter Property="Margin" Value="16, 8, 16, 0"></Setter>
+	</Style>
+
+	<Style Selector="Window.Dark Grid.Heading Border.TextBlockBorder">
+		<Setter Property="BorderThickness" Value="2"></Setter>
+		<Setter Property="BorderBrush" Value="#899BA4"></Setter>
+		<Setter Property="CornerRadius" Value="0"></Setter>
+	</Style>
+	<Style Selector="Window.Light Grid.Heading Border.TextBlockBorder">
+		<Setter Property="BorderThickness" Value="2"></Setter>
+		<Setter Property="BorderBrush" Value="#566871"></Setter>
+		<Setter Property="CornerRadius" Value="0"></Setter>
+	</Style>
+
+	<Style Selector="Grid.Heading TextBlock">
+		<Setter Property="FontSize" Value="12"></Setter>
+		<Setter Property="FontWeight" Value="Regular"></Setter>
+
+		<Setter Property="VerticalAlignment" Value="Center"></Setter>
+		<Setter Property="HorizontalAlignment" Value="Center"></Setter>
+	</Style>
+	<Style Selector="Window.Dark Grid.Heading TextBlock">
+		<Setter Property="Foreground" Value="#899BA4"></Setter>
+	</Style>
+	<Style Selector="Window.Light Grid.Heading TextBlock">
+		<Setter Property="Foreground" Value="#566871"></Setter>
+	</Style>
+
+	<!-- ListBox Styles -->
+	<Style Selector="ListBox">
+		<Setter	Property="Margin" Value="16,0"></Setter>
+		
+		<Setter Property="BorderThickness" Value="2"></Setter>
+		
+		<Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+		<Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+	</Style>
+	<Style Selector="Window.Dark ListBox">
+		<Setter Property="BorderBrush" Value="#899BA4"></Setter>
+		<Setter Property="Background" Value="#14181A"></Setter>
+		<Setter Property="Foreground" Value="#DFE4E7"></Setter>
+	</Style>
+	<Style Selector="Window.Light ListBox">
+		<Setter Property="BorderBrush" Value="#566871"></Setter>
+		<Setter Property="Background" Value="#DFE4E7"></Setter>
+		<Setter Property="Foreground" Value="#14181A"></Setter>
+	</Style>
+	
+	<!-- AllAvgRes Styles -->
+	<Style Selector="Grid.AllAvgRes">
+		<Setter Property="Margin" Value="16, 0, 16, 8"></Setter>
+	</Style>
+
+	<Style Selector="Window.Dark Grid.AllAvgRes Border.TextBlockBorder">
+		<Setter Property="BorderThickness" Value="2"></Setter>
+		<Setter Property="BorderBrush" Value="#899BA4"></Setter>
+		<Setter Property="CornerRadius" Value="0"></Setter>
+	</Style>
+	<Style Selector="Window.Light Grid.AllAvgRes Border.TextBlockBorder">
+		<Setter Property="BorderThickness" Value="2"></Setter>
+		<Setter Property="BorderBrush" Value="#566871"></Setter>
+		<Setter Property="CornerRadius" Value="0"></Setter>
+	</Style>
+
+	<Style Selector="Grid.AllAvgRes TextBlock">
+		<Setter Property="FontSize" Value="12"></Setter>
+		<Setter Property="FontWeight" Value="Regular"></Setter>
+
+		<Setter Property="VerticalAlignment" Value="Center"></Setter>
+		<Setter Property="HorizontalAlignment" Value="Center"></Setter>
+	</Style>
+	<Style Selector="Window.Dark Grid.AllAvgRes TextBlock">
+		<Setter Property="Foreground" Value="#899BA4"></Setter>
+	</Style>
+	<Style Selector="Window.Light Grid.AllAvgRes TextBlock">
+		<Setter Property="Foreground" Value="#566871"></Setter>
+	</Style>
+
+	<!-- NewStudentBlock Styles -->
+	<Style Selector="Grid.NewStudentBlock">
+		<Setter Property="Margin" Value="16"></Setter>		
+	</Style>
+
+	<Style Selector="Grid.NewStudentBlock TextBox">
+		<Setter Property="CornerRadius" Value="4, 0, 0, 4"></Setter>
+		<Setter Property="BorderThickness" Value="2"></Setter>
+		
+		<Setter Property="FontSize" Value="16"></Setter>
+		<Setter Property="FontWeight" Value="Regular"></Setter>
+
+		<Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+		<Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+		<Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+		<Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+	</Style>
+	<Style Selector="Window.Dark Grid.NewStudentBlock TextBox">
+		<Setter Property="Background" Value="#14181A"></Setter>
+		<Setter Property="BorderBrush" Value="#899BA4"></Setter>
+		<Setter Property="Foreground" Value="#899BA4"></Setter>
+	</Style>
+	<Style Selector="Window.Light Grid.NewStudentBlock TextBox">
+		<Setter Property="Background" Value="#DFE4E7"></Setter>
+		<Setter Property="BorderBrush" Value="#566871"></Setter>
+		<Setter Property="Foreground" Value="#566871"></Setter>
+	</Style>
+
+	<Style Selector="Grid.NewStudentBlock ComboBox">
+		<Setter Property="CornerRadius" Value="0"></Setter>
+		<Setter Property="BorderThickness" Value="2"></Setter>
+		
+		<Setter Property="FontSize" Value="16"></Setter>
+		<Setter Property="FontWeight" Value="Regular"></Setter>
+		
+		<Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+		<Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+		<Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+		<Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+	</Style>
+	<Style Selector="Window.Dark Grid.NewStudentBlock ComboBox">
+		<Setter Property="Background" Value="#14181A"></Setter>
+		<Setter Property="BorderBrush" Value="#899BA4"></Setter>
+		<Setter Property="Foreground" Value="#899BA4"></Setter>
+	</Style>
+	<Style Selector="Window.Light Grid.NewStudentBlock ComboBox">
+		<Setter Property="Background" Value="#DFE4E7"></Setter>
+		<Setter Property="BorderBrush" Value="#566871"></Setter>
+		<Setter Property="Foreground" Value="#566871"></Setter>
+	</Style>
+	
+	<Style Selector="Window.Dark Grid.NewStudentBlock Border.TextBlockBorder">
+		<Setter Property="BorderThickness" Value="2"></Setter>
+		<Setter Property="BorderBrush" Value="#899BA4"></Setter>
+		<Setter Property="CornerRadius" Value="0, 2, 2, 0"></Setter>
+	</Style>
+	<Style Selector="Window.Light Grid.NewStudentBlock Border.TextBlockBorder">
+		<Setter Property="BorderThickness" Value="2"></Setter>
+		<Setter Property="BorderBrush" Value="#566871"></Setter>
+		<Setter Property="CornerRadius" Value="0, 2, 2, 0"></Setter>
+	</Style>
+	
+	<Style Selector="Grid.NewStudentBlock TextBlock">
+		<Setter Property="FontSize" Value="16"></Setter>
+		<Setter Property="FontWeight" Value="Regular"></Setter>
+
+		<Setter Property="VerticalAlignment" Value="Center"></Setter>
+		<Setter Property="HorizontalAlignment" Value="Center"></Setter>
+	</Style>
+	<Style Selector="Window.Dark Grid.NewStudentBlock TextBlock">
+		<Setter Property="Foreground" Value="#899BA4"></Setter>
+	</Style>
+	<Style Selector="Window.Light Grid.NewStudentBlock TextBlock">
+		<Setter Property="Foreground" Value="#566871"></Setter>
+	</Style>
+	
+	
+	
+	<!-- ~~~BUTTON'S STYLES~~~ -->
+	<Style Selector="Button">
+		<Setter Property="Margin" Value="16, 8"></Setter>
+		
+		<Setter Property="Background" Value="#6D828D"></Setter>
+		<Setter Property="CornerRadius" Value="8"></Setter>
+		
+		<Setter Property="FontSize" Value="16"></Setter>
+		<Setter Property="Foreground" Value="#14181A"></Setter>
+		<Setter Property="FontWeight" Value="Medium"></Setter>
+		
+		<Setter Property="VerticalAlignment" Value="Stretch"></Setter>
+		<Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+		<Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+		<Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+	</Style>
+	<Style Selector="Button:pointerover /template/ ContentPresenter">
+		<Setter Property="Background" Value="#566871"></Setter>
+		<Setter	Property="TextBlock.Foreground" Value="#C3CCD0"></Setter>
+		<Setter Property="TextBlock.FontWeight" Value="Bold"></Setter>
+	</Style>
+	<Style Selector="Button:pressed /template/ ContentPresenter">
+		<Setter	Property="Background" Value="#404D54"></Setter>
+		<Setter	Property="TextBlock.Foreground" Value="#A6B3BA"></Setter>
+		<Setter Property="TextBlock.FontWeight" Value="Bold"></Setter>
+	</Style>
+	<Style Selector="Button:focus /template/ ContentPresenter">
+		<Setter Property="BorderBrush" Value="#899BA4"></Setter>
+		<Setter Property="BorderThickness" Value="4"></Setter>
+		<Setter	Property="TextBlock.Foreground" Value="#C3CCD0"></Setter>
+		<Setter Property="TextBlock.FontWeight" Value="Bold"></Setter>
+	</Style>
+	
+	<!-- ~Danger Button's Styles~ -->
+	<Style Selector="Button#DeleteStudent">
+		<Setter Property="Background" Value="#C32213"></Setter>
+		<Setter Property="Foreground" Value="#DFE4E7"></Setter>
+	</Style>
+	<Style Selector="Button#DeleteStudent:pointerover /template/ ContentPresenter">
+		<Setter Property="Background" Value="#9C1B0F"></Setter>
+		<Setter	Property="TextBlock.Foreground" Value="#C3CCD0"></Setter>
+	</Style>
+	<Style Selector="Button#DeleteStudent:pressed /template/ ContentPresenter">
+		<Setter	Property="Background" Value="#75140B"></Setter>
+		<Setter	Property="TextBlock.Foreground" Value="#A6B3BA"></Setter>
+	</Style>
+	<Style Selector="Button#DeleteStudent:focus /template/ ContentPresenter">
+		<Setter Property="BorderBrush" Value="#DB7A71"></Setter>
+		<Setter	Property="TextBlock.Foreground" Value="#C3CCD0"></Setter>
+	</Style>
+
+	<!-- ~Succes Button's Styles~ -->
+	<Style Selector="Button#AddStudent">
+		<Setter Property="Background" Value="#1A9142"></Setter>
+		<Setter Property="Foreground" Value="#DFE4E7"></Setter>
+	</Style>
+	<Style Selector="Button#AddStudent:pointerover /template/ ContentPresenter">
+		<Setter Property="Background" Value="#136D31"></Setter>
+		<Setter	Property="TextBlock.Foreground" Value="#C3CCD0"></Setter>
+	</Style>
+	<Style Selector="Button#AddStudent:pressed /template/ ContentPresenter">
+		<Setter	Property="Background" Value="#0D4921"></Setter>
+		<Setter	Property="TextBlock.Foreground" Value="#A6B3BA"></Setter>
+	</Style>
+	<Style Selector="Button#AddStudent:focus /template/ ContentPresenter">
+		<Setter Property="BorderBrush" Value="#4DC475"></Setter>
+		<Setter	Property="TextBlock.Foreground" Value="#C3CCD0"></Setter>
+	</Style>
+	
+</Styles>
