@@ -38,7 +38,7 @@
 				<ListBox Name="ListOfStudents" Grid.Row="1">
 
 				</ListBox>
-				<Grid Classes="AllAvgRes" Grid.Row="2"
+				<Grid Classes="AllAvgEva" Grid.Row="2"
 					  ColumnDefinitions="3*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 2*"
 					  RowDefinitions="100*">
 					<Border Classes="TextBlockBorder" Grid.Column="0"></Border>
@@ -202,33 +202,33 @@
 		<Setter Property="Foreground" Value="#14181A"></Setter>
 	</Style>
 	
-	<!-- AllAvgRes Styles -->
-	<Style Selector="Grid.AllAvgRes">
+	<!-- AllAvgEva Styles -->
+	<Style Selector="Grid.AllAvgEva">
 		<Setter Property="Margin" Value="16, 0, 16, 8"></Setter>
 	</Style>
 
-	<Style Selector="Window.Dark Grid.AllAvgRes Border.TextBlockBorder">
+	<Style Selector="Window.Dark Grid.AllAvgEva Border.TextBlockBorder">
 		<Setter Property="BorderThickness" Value="2"></Setter>
 		<Setter Property="BorderBrush" Value="#899BA4"></Setter>
 		<Setter Property="CornerRadius" Value="0"></Setter>
 	</Style>
-	<Style Selector="Window.Light Grid.AllAvgRes Border.TextBlockBorder">
+	<Style Selector="Window.Light Grid.AllAvgEva Border.TextBlockBorder">
 		<Setter Property="BorderThickness" Value="2"></Setter>
 		<Setter Property="BorderBrush" Value="#566871"></Setter>
 		<Setter Property="CornerRadius" Value="0"></Setter>
 	</Style>
 
-	<Style Selector="Grid.AllAvgRes TextBlock">
+	<Style Selector="Grid.AllAvgEva TextBlock">
 		<Setter Property="FontSize" Value="12"></Setter>
 		<Setter Property="FontWeight" Value="Regular"></Setter>
 
 		<Setter Property="VerticalAlignment" Value="Center"></Setter>
 		<Setter Property="HorizontalAlignment" Value="Center"></Setter>
 	</Style>
-	<Style Selector="Window.Dark Grid.AllAvgRes TextBlock">
+	<Style Selector="Window.Dark Grid.AllAvgEva TextBlock">
 		<Setter Property="Foreground" Value="#899BA4"></Setter>
 	</Style>
-	<Style Selector="Window.Light Grid.AllAvgRes TextBlock">
+	<Style Selector="Window.Light Grid.AllAvgEva TextBlock">
 		<Setter Property="Foreground" Value="#566871"></Setter>
 	</Style>
 

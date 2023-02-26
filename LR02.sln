@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentControl", "StudentControl\StudentControl.csproj", "{9AC3B836-BCE1-47BF-BAD4-80E62371DF84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITestsForStudentControl", "UITestsForStudentControl\UITestsForStudentControl.csproj", "{FF6A1C14-8541-4864-AA8E-D3004EC597E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UITestsForStudentControl", "UITestsForStudentControl\UITestsForStudentControl.csproj", "{FF6A1C14-8541-4864-AA8E-D3004EC597E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,7 +18,6 @@ Global
 		{9AC3B836-BCE1-47BF-BAD4-80E62371DF84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AC3B836-BCE1-47BF-BAD4-80E62371DF84}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FF6A1C14-8541-4864-AA8E-D3004EC597E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF6A1C14-8541-4864-AA8E-D3004EC597E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF6A1C14-8541-4864-AA8E-D3004EC597E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF6A1C14-8541-4864-AA8E-D3004EC597E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
